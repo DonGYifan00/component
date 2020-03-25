@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>使用Handsontable绘制表格</title>  
+    <link href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="./layout.css">
+</head>
+<body>
+    <h2 style="margin-left: 300px">2020 语言排行榜</h2>
+    <div id="mainX"></div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
+<script>
+    var container = document.getElementById('mainX');
+    var hot = new Handsontable(container, {
+        data: [
+            ['Java',1,'降','-0.01%'],
+            ['C',2,'升','+2.44%'],
+            ['Python',3,'升','+1.41%'],
+            ['C++',4,'降','-0','-2.58%'],
+            ['C#',5,'升','+2.07%'],
+            ['Visual Basic.NET',6,'降','-1.17%'],
+            ['JavaScript',7,'降','-0.85%']
+        ],
+        colHeaders: true,
+        colHeaders: ['语言名称', '排名', '升或降','变化幅度'],
+        contextMenu: !0, manualRowResize: !0, manualColumnResize: !0, rowHeaders: !0,
+        rowHeights: 50,
+        colWidths: 200,
+        className: "htCenter htMiddle", 
+    });
+</script>
+</html>

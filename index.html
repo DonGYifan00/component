@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <title>二进熵函数</title>
+  <link rel="stylesheet" href="./layout.css">
+</head>
+<body>
+    <div id="main"></div>
+    <script src="https://lib.baomitu.com/echarts/4.6.0/echarts.min.js"></script>
+</body>
+<script>
+    var myChart = echarts.init(document.getElementById('main'));
+    var xData = [2000,2005,2010,2015,2020];
+    var yData = [0,2,4,6,8,10];
+
+    var option = {
+        title: {
+            text: 'JavaScript语言排名变化'
+        },
+        tooltip: {},
+        xAxis: {
+            data: xData
+        },
+        yAxis:{
+            data:yData
+        },
+        yAxis: {},
+        series: [{
+            name: '排名',
+            type: 'line',
+            data: [6,9,8,8,7]
+        }]
+};
+
+    myChart.setOption(option);
+</script>
+</html>
